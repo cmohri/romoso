@@ -1,8 +1,18 @@
+/*
+Clara Mohri, Rohan Ahammed, Soojin Choi
+APCS2 Pd08
+HW53-- All That Bouncin’
+2018-05-24
+*/
+
 class Ball {
+  //initial coordinates  
   float x = random(50, 550);//must be offset by 50 (the radius) in order to not have splits
   float y = random(50, 550);
+  //rate of change in x and y direction: 
   float xspeed = random(3);
   float yspeed = random(3);
+  //color of Ball:
   float numr = random(256);
   float numg = random(256);
   float numb = random(256);
