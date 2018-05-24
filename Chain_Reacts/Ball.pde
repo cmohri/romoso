@@ -3,9 +3,13 @@ class Ball {
   float y = random(50, 550);
   float xspeed = random(3);
   float yspeed = random(3);
+  float numr = random(256);
+  float numg = random(256);
+  float numb = random(256);
+  color c = color(numr, numg, numb);
 
   Ball() {
-    fill(color(random(256), random(256), random(256)));
+    fill(c);
     ellipse(x, y, 50, 50);
   }
 
@@ -20,5 +24,6 @@ class Ball {
     x += xspeed;
     y += yspeed;
     ellipse(x, y, 50, 50);
+    fill(c);
   }
 }
