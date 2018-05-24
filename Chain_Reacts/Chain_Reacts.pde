@@ -13,7 +13,7 @@ void setup() {
   size(600, 600);//sets up 600x600
   background(0);//black background
   for (int i = 0; i < (int)numBalls; i++) {//stores the object in the array
-    list[i] = new Ball();
+    list[i] = new Ball((int)random(600), (int)random(600));
     fill(color(random(256), random(256), random(256)));//colors the ball a random color
   }
 }
@@ -24,4 +24,6 @@ void draw() {
   for (int i = 0; i < (int) numBalls; i++) {//for every ball
     list[i].update();//update aka move
   }
+}
+void mouseClicked(){
 }

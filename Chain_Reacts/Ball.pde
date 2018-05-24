@@ -29,9 +29,9 @@ class Ball {
   float numb = random(256);
   color c = color(numr, numg, numb);//variables are created to store the colors of the obj
 
-  Ball() {
+  Ball(int xcor, int ycor) {//make two constructors
     fill(c);//color it with the randomized color
-    ellipse(x, y, rad, rad);//start from a random spot within 50-500 of both x and y
+    ellipse(xcor, ycor, rad, rad);//start from a random spot within 50-500 of both x and y
   }
   void update() {
     if (x <= rad / 2 || x >= 600 - (rad / 2)) {
@@ -45,3 +45,4 @@ class Ball {
     ellipse(x, y, rad, rad);
     fill(c);
   } 
+}
