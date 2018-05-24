@@ -13,7 +13,6 @@ void setup() {
 
 void draw() {
   clear();
-  fill(0, 0, 0);
   for (int i = 0; i < (int) numBalls; i++) {
     list[i].update();
     
