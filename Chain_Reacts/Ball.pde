@@ -10,8 +10,8 @@ class Ball {
   float x = random(50, 550);//must be offset by 50 (the radius) in order to not have splits
   float y = random(50, 550);
   //rate of change in x and y direction: 
-  float xspeed = random(3);
-  float yspeed = random(3);
+  float dx = random(3);
+  float dy = random(3);
   //color of Ball:
   float numr = random(256);
   float numg = random(256);
@@ -24,14 +24,15 @@ class Ball {
   }
   void update() {
     if (x <= 25 || x >= 575) {
-      xspeed = -1 * xspeed;//change direction
+      dx = -1 * dx;//change direction
     }
     if (y <= 25 || y >= 575) {
-      yspeed = -1 *yspeed;//change direction
+      dy = -1 *dy;//change direction
     }
-    x += xspeed;//go the random # of units per call of draw
-    y += yspeed;
+    x += dx;//go the random # of units per call of draw
+    y += dy;
     ellipse(x, y, 50, 50);
     fill(c);
   }
+  
 }
