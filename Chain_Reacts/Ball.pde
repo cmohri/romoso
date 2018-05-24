@@ -4,8 +4,8 @@ APCS2 Pd08
 HW53-- All That Bouncin’
 2018-05-24
 */
-
 class Ball {
+  
   //states
   final static int MOVING = 0;
   final static int GROWING = 1;
@@ -13,6 +13,7 @@ class Ball {
   final static int DEAD = 3;
   final float CHANGE_FACTOR = .25;
   final float MAX_RADIUS = 50;
+  
   //initial coordinates  
   float x = random(10, 590);//must be offset by 50 (the radius) in order to not have splits
   float y = random(10, 590);
@@ -44,4 +45,3 @@ class Ball {
     ellipse(x, y, rad, rad);
     fill(c);
   } 
-}
