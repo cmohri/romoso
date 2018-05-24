@@ -1,3 +1,10 @@
+/*
+Clara Mohri, Rohan Ahammed, Soojin Choi
+APCS2 Pd08
+HW53-- All That Bouncin’
+2018-05-24
+*/
+
 float numBalls = random(25, 35);//randomly chooses a num of balls from 25-35
 Ball[] list = new Ball[(int)numBalls];//creates an array to hold these balls.
 //array is necessary to be able to reference the Balls w/o creating 25-35 references
