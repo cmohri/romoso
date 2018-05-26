@@ -54,15 +54,25 @@ class Ball {
     ellipse(x, y, rad, rad);
     fill(c);
   }
-  int state(int x) {
-    state = x;
-    return state;
+  
+  int getState() {
+    return state;  //returns the state of the current ball
   }
+  
   void grow() {
-    if (state == 1) {
-      rad += CHANGE_FACTOR;
-      ellipse(x, y, rad, rad);
+    if (rad - CHANGE_FACTOR <= 0) { //if the radius becomes too small
+      state = 3;                    //the ball is dead
     }
-    if (rad >= MAX_RADIUS)
+    if (rad >= MAX_RADIUS) { //if at the threshold
+        state = 2;           //start shrinking
+    }
+    if (state == 1) { // if growing
+      rad += CHANGE_FACTOR; //increase the radius by change_factor
+      ellipse(x, y, rad, rad); //create a ball with the new radius
+    }
+    if (state == 2) { //if shrinking
+      rad -= CHANGE_FACTOR; //decrease the radius by change_factor
+      ellipse (x, y, rad, rad); //create a ball with the updated radius
+    }
   }
 }
