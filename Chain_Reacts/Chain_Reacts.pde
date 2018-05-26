@@ -24,7 +24,7 @@ void draw() {
   for (int i = 0; i < (int) numBalls; i++) {//for every ball
     list[i].update();//update aka move
   }
-  if (clicked != null && clicked.getState() != 3){
+  if (clicked != null && clicked.getState() != clicked.DEAD){
     clicked.grow();
   }
 }

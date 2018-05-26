@@ -66,13 +66,19 @@ class Ball {
     if (rad >= MAX_RADIUS) { //if at the threshold
         state = 2;           //start shrinking
     }
-    if (state == 1) { // if growing
+    if (state == GROWING) { // if growing
       rad += CHANGE_FACTOR; //increase the radius by change_factor
       ellipse(x, y, rad, rad); //create a ball with the new radius
     }
-    if (state == 2) { //if shrinking
+    if (state == SHRINKING) { //if shrinking
       rad -= CHANGE_FACTOR; //decrease the radius by change_factor
       ellipse (x, y, rad, rad); //create a ball with the updated radius
     }
   }
+   boolean isColliding(Ball adj) {
+   return (this != adj && 
+   state == MOVING && 
+   (adj.state == GROWING || adj.state == SHRINKING) && 
+   ((rad + adj.rad)/2 > dist(x, y, adj.x, adj.y)));
+ }
 }
