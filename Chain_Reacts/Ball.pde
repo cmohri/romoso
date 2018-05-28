@@ -38,10 +38,10 @@ class Ball {
     return state;//return the state so can be accessed by Chain_Reacts
   }
   void move() {
-    if (x <= rad || x >= (600-rad)) {
+    if (x <= (rad/2) || x >= (600-(rad/2))) {
       dx = -1 * dx;//change direction
     }
-    if (y <= rad || y >= (600-rad)) {
+    if (y <= (rad/2) || y >= (600-(rad/2))) {
       dy = -1 *dy;//change direction
     }
     x += dx;
