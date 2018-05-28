@@ -46,8 +46,8 @@ class Ball {
     }
     x += dx;
     y += dy;
-    ellipse(x, y, rad, rad);
     fill(c);
+    ellipse(x, y, rad, rad);
     state = MOVING;
   }
 
@@ -57,23 +57,23 @@ class Ball {
     } else if (rad >= MAX_RADIUS) {
       state = SHRINKING;
       rad -= CHANGE_FACTOR;
-      ellipse(x, y, rad, rad);
       fill(c);
+      ellipse(x, y, rad, rad);
     } else if (state == GROWING) {
       rad += CHANGE_FACTOR;      
-      ellipse(x, y, rad, rad);
       fill(c);
+      ellipse(x, y, rad, rad);
     }
     if (state == SHRINKING) {
       rad -= CHANGE_FACTOR;
-      ellipse(x, y, rad, rad);
       fill(c);
+      ellipse(x, y, rad, rad);
     }
     if (state == MOVING) {
       state = GROWING;
       rad += CHANGE_FACTOR;
-      ellipse(x, y, rad, rad);
       fill(c);
+      ellipse(x, y, rad, rad);
     }
   }
 
