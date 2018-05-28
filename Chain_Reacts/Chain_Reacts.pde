@@ -1,4 +1,6 @@
 Ball clicked;//ball that grows/shrinks at mouse-click
+//NOTE: Clicking another time will delete the previously clicked ball. To chain react, you are only allowed ONE ball!
+//colors may change randomly. Working on a fix!
 float numBalls = random(25, 35);//random # of moving balls between 25-35
 Ball[] list = new Ball[(int)numBalls];//array of all balls besides clicked one
 
