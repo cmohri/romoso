@@ -18,7 +18,7 @@ class Ball {
   color c = color(numr, numg, numb);//random colors
 
   final float CHANGE_FACTOR = .25;//how much is added/subtract during each loop
-  final float MAX_RADIUS = 50;//the threshold for growing
+  final float MAX_RADIUS = 100;//the threshold for growing
 
   Ball() {
     fill(c);
